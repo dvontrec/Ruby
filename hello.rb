@@ -72,7 +72,7 @@ puts
 puts
 
 # *******************************************************
-                  # Symbols
+                  # SYMBOLS
 # *******************************************************
 # basic symbols and symbol functions
 # memory effeciant
@@ -81,6 +81,29 @@ puts
 puts :seven
 print "Symbol methods: "
 print :seven.methods
+puts
+puts
+puts
+puts
+
+# *******************************************************
+                  # HASHES
+# *******************************************************
+# basic hashes and hash functions
+# KVP Key:Value
+
+# creates a new hash
+info = {
+  # symbol for the key and => for value assignment
+  :name => "Dvontre",
+  :email => "dc@host.com"
+}
+# print the full hash
+puts info
+# print just the email
+puts info[:email]
+print "Hash Methods: "
+print info.methods
 puts
 puts
 puts
