@@ -5,3 +5,6 @@
   %p= time_ago_in_words(doc.created_at)
   -# small snippet from body
   %p= truncate(doc.content, length:50)
+
+-# create a link to create new docs
+= link_to "Create Doc", new_doc_path

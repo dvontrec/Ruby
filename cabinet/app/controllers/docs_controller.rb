@@ -1,6 +1,6 @@
 class DocsController < ApplicationController
   # runs ahead of all actions
-  before_action :find_doc, only: [:show, "edit, :update, :destroy"]
+  before_action :find_doc, only: [:show, :edit, :update, :destroy]
 
   # index
   def index
@@ -28,11 +28,22 @@ class DocsController < ApplicationController
       render 'new'
     end
   end
-  # update (no view)
   def edit
+  end
+  # update (no view)
+  def update
+    # if document is updated redirect to the doc show
+    if @doc.update(doc_params)
+      redirect_to @doc
+    # else render edit page
+    else
+      render 'edit'
+    end
   end
   # destroy (no view)
   def destroy
+    @doc.destroy
+    redirect_to docs_path
   end
 
   # private methods
