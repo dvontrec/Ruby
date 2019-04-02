@@ -1,6 +1,11 @@
 class DocsController < ApplicationController
+  # runs ahead of all actions
+  before_action :find_doc, only: [:show, "edit, :update, :destroy"]
+
   # index
   def index
+    # find all documents in descending order
+    @docs = Doc.all.order("created_at DESC")
   end
   # read
   def show
@@ -33,9 +38,12 @@ class DocsController < ApplicationController
   # private methods
   private
     # apply to entire controller DRY coding
+    # finds document by ID
     def find_doc
+      # get the specific document by id
+      @doc = Doc.find(params[:id]) 
     end
-
+    # sends the title and content of document
     def doc_params
       params.require(:doc).permit(:title, :content)
     end

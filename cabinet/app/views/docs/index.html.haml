@@ -1,0 +1,7 @@
+- @docs.each do |doc|
+  -# creates a link to view doc
+  %h2= link_to doc.title, doc
+  -# how long ago it was created
+  %p= time_ago_in_words(doc.created_at)
+  -# small snippet from body
+  %p= truncate(doc.content, length:50)
