@@ -117,9 +117,39 @@ puts
 def hello
   # method body
   puts "Hello From the method"
-  # ends the method
+# ends the method
 end
 
 # calls the hello method
 hello
+puts
+puts
+puts
+# *******************************************************
+                  # CONDITIONALS
+# *******************************************************
+
+age = 24
+# only runs if true 
+if age < 25
+  # do stuff
+  puts "Youve got time"
+# end if
+end
+
+# runs unless false
+unless age > 30
+  puts "youre young"
+end
+
+if age < 10 
+  put "Youre a baby"
+# elseif other if block
+elsif age < 20
+  puts "youre vibrant"
+# if other conditions are not met
+else
+  puts "sorry grandpa"
+end
+
 
