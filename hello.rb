@@ -109,3 +109,17 @@ puts
 puts
 puts
 
+# *******************************************************
+                  # METHODS
+# *******************************************************
+
+#  define a method
+def hello
+  # method body
+  puts "Hello From the method"
+  # ends the method
+end
+
+# calls the hello method
+hello
+
