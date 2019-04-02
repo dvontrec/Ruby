@@ -20,6 +20,10 @@ puts 32.even?
 # prints out methods the number has
 print "Number Mathods: " 
 print 37.methods
+puts
+puts
+puts
+puts
 
 # prints the digits individually from 1->10->100->1000 order
 print 12673.digits
@@ -39,6 +43,9 @@ puts "4 Times Fast, " * 4
 # prints ruby string methods
 print "String Methods :"
 print "this is a string".methods
+puts
+puts
+puts
 puts
 
 # *******************************************************
@@ -60,3 +67,22 @@ puts
 print "Array Methods: "
 print the_array.methods
 puts
+puts
+puts
+puts
+
+# *******************************************************
+                  # Symbols
+# *******************************************************
+# basic symbols and symbol functions
+# memory effeciant
+# Start with semicolons
+# prints seven as symbol
+puts :seven
+print "Symbol methods: "
+print :seven.methods
+puts
+puts
+puts
+puts
+
