@@ -166,3 +166,8 @@ nums.each do |n|
   # loop through each number and print the number multiplied by 5
   puts n*5
 end
+puts 
+puts 
+
+# same thing in a single line
+nums.each {| n | puts n*3}
