@@ -28,3 +28,9 @@ puts 12673.digits
                   # STRINGS
 # *******************************************************
 # basic strings and string functions
+
+# basic string concatination
+puts "This is" + " concatinatino"
+
+# strings can be multiplied to repeat
+puts "4 Times Fast, " * 4
