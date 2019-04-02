@@ -125,6 +125,7 @@ hello
 puts
 puts
 puts
+
 # *******************************************************
                   # CONDITIONALS
 # *******************************************************
@@ -151,5 +152,17 @@ elsif age < 20
 else
   puts "sorry grandpa"
 end
+puts
+puts
+puts
+# *******************************************************
+                  # ITERATION
+# *******************************************************
+# loops over a collection with .each
 
-
+nums = [1,2,3,4,5]
+# | X | Pipes let you save current element as a variable
+nums.each do |n|
+  # loop through each number and print the number multiplied by 5
+  puts n*5
+end
