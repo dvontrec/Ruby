@@ -5,7 +5,7 @@ class DocsController < ApplicationController
   # index
   def index
     # find all documents in descending order
-    @docs = Doc.all.order("created_at DESC")
+    @docs = Doc.where(user_id: current_user).order("created_at DESC")
   end
   # read
   def show
