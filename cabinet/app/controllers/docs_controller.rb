@@ -12,13 +12,13 @@ class DocsController < ApplicationController
   end
   # create 
   def new
-    # sets the doc variable to be a new doc
-    @doc = Doc.new
+    # sets the doc variable to be a new doc owned by current user
+    @doc = current_user.docs.build
   end
   # create (no view)
   def create
     # creates a document with giver parameters
-    @doc = Doc.new(doc_params)
+    @doc = current_user.docs.build(doc_params)
     # if document saves
     if @doc.save
       # redirect to new doc show page
