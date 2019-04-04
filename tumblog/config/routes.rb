@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   end
   # makes the root the posts controller's index actino
   root "posts#index"
+
+  # creates one route /about performs the Pages about actoion
+  get '/about', to: 'pages#about'
 end
