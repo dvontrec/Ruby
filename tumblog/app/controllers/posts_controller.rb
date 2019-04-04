@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   def index
+    # index will display all posts in descending order
+    @posts = Post.all.order('created_at DESC')
   end
   # new method (has view)
   def new
