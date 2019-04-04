@@ -5,13 +5,18 @@ class PostsController < ApplicationController
   end
   # new method (has view)
   def new
+    @post = Post.new
   end
   # functionality for creating new post
   def create
     @post = Post.new(post_params)
-    @post.save
 
-    redirect_to @post
+    # if the post doesnt save render new
+    if @post.save
+      redirect_to @post
+    else
+      render 'new'
+    end
   end
   # show view
   def show
