@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  # users can only access index and show if not authenticated
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     # index will display all posts in descending order

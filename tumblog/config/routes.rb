@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # allows application to use post routes
   resources :posts do
     # sets comments routes within posts
